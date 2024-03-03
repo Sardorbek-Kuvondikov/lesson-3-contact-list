@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesson-3 Contact list tel ni yunik qilish</title>
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <header class="header__content-control">
+            <div class="container">
+                <div class="contact__control rounded mt-3 p-3">
+                    <h1
+                        class="contact__list text-center text-white mb-4">Contact
+                        List</h1>
+                    <div class="header__control d-flex text-white row">
+                        <div class="data__entry col m-4 mt-0 mb-0">
+                            <form class="js-contact-form">
+                                <input
+                                    class="form-control js-name-input mb-3"
+                                    type="text"
+                                    placeholder="Enter your name"
+                                    aria-label="Enter your name" required>
+                                <input
+                                    class="form-control js-close-input mb-3"
+                                    list="close__people-input"
+                                    type="text"
+                                    placeholder="Enter your close people"
+                                    aria-label="Enter your name" required>
+                                <datalist id="close__people-input">
+                                    <option value="Famliy"></option>
+                                    <option value="Friend"></option>
+                                    <option value="Relative"></option>
+                                    <option value="Like"></option>
+                                </datalist>
+
+                                <input
+                                    class="form-control js-number-input mb-0"
+                                    type="tel"
+                                    pattern="[+]\d{12}"
+                                    placeholder="(+998) Enter your number"
+                                    aria-label="(+998) Enter your number"
+                                    required>
+                                <span
+                                    class="invalid__massage text-danger">this
+                                    number is
+                                    used!</span>
+
+                                <button
+                                    class="btn__control btn bg-success border-0 text-white js-contact-add-btn mt-3 border d-block">Add
+                                    Contact</button>
+                            </form>
+                        </div>
+
+                        <div class="where__data-stored col">
+                            <ul class="js-contact-item">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <template class="js-contact-template">
+                <li
+                    class="js-contact-link list-unstyled border p-2 mb-2  align-items-center justify-content-between rounded">
+                    <h5
+                        class="js-contact-name mb-2 display-6">Sardorbek</h5>
+                    <hr>
+                    <div
+                        class="result d-flex align-items-center justify-content-between fs-5">
+                        <strong
+                            class="js-contact-close-people">famliy</strong>
+                        <a href="+998916286861"
+                            class="js-contact-number text-decoration-none text-white ">+998916286861</a>
+                        <button
+                            class="btn btn-danger js-delete-btn">Delete</button>
+                    </div>
+                </li>
+            </template>
+        </header>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
